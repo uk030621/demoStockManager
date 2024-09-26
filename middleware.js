@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 export function middleware(req) {
   const token = req.cookies.get('token')?.value;
 
-  // If no token exists, redirect to login
+  // If no token exists, redirect to the login page (absolute URL)
   if (!token) {
     return NextResponse.redirect(new URL('/login', req.nextUrl.origin));
   }
@@ -14,5 +14,5 @@ export function middleware(req) {
 
 // Apply the middleware to protected routes
 export const config = {
-  matcher: ['/ukstock/:path*', '/usstock/:path*', '/eustock/:path*','/asiastock/:path*' ], // Add paths for protected pages
+  matcher: ['/ukstock/:path*', '/usstock/:path*', '/eustock/:path*', '/asiastock/:path*'], // Add paths for protected pages
 };
