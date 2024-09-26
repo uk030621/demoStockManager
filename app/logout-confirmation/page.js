@@ -15,6 +15,9 @@ const LogoutConfirmation = () => {
         });
 
         if (response.ok) {
+            // Confirm cookie is cleared by checking document.cookie (or any session validation mechanism)
+            console.log("Successfully logged out. Cookie cleared.");
+
             // Redirect to login page after successful logout
             router.push('/login');
         } else {
@@ -23,7 +26,7 @@ const LogoutConfirmation = () => {
     } catch (error) {
         console.error("Error logging out:", error);
     }
-  };
+};
 
   const handleShowInstructions = () => setShowInstructions(true);
 

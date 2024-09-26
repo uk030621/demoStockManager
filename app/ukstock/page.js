@@ -316,6 +316,7 @@ export default function Home() {
                     setNewStock({ symbol: '', sharesHeld: '' });
                 }}>Cancel</button>}
                 <button className="input-stock-button" onClick={refreshAllData}>Refresh</button>
+                {/*<Link className='logout-confirm-link' href="/logout-confirmation">Logout</Link>*/}
                 <Link className='logout-confirm-link' href="/logout-confirmation">Logout</Link>
                 {/*<Link className='logout-confirm-link' href="api/logout">Logout</Link>*/}
             </div>
