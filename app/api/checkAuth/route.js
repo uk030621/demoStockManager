@@ -12,7 +12,7 @@ export async function GET(req) {
   try {
     // Verify the JWT token
     jwt.verify(token, process.env.JWT_SECRET);
-    return NextResponse.json({ message: 'Authenticated' }, { status: 200 });
+    return NextResponse.json({ message: 'Authenticated, well done!!!!' }, { status: 200 });
   } catch (error) {
     return NextResponse.json({ error: 'Invalid token' }, { status: 401 });
   }

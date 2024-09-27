@@ -5,6 +5,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import styles from './page.module.css';
 
+
 export default function Home() {
     const [stocks, setStocks] = useState([]);
     const [previousPrices, setPreviousPrices] = useState({}); // Store previous prices
@@ -316,8 +317,9 @@ export default function Home() {
                     setNewStock({ symbol: '', sharesHeld: '' });
                 }}>Cancel</button>}
                 <button className="input-stock-button" onClick={refreshAllData}>Refresh</button>
+                
                 {/*<Link className='logout-confirm-link' href="/logout-confirmation">Logout</Link>*/}
-                <Link className='logout-confirm-link' href="/logout-confirmation">Logout</Link>
+                <Link className='logout-confirm-link' href="logout-confirmation">Logout</Link>
                 {/*<Link className='logout-confirm-link' href="api/logout">Logout</Link>*/}
             </div>
 

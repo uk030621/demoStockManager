@@ -4,6 +4,7 @@
 import { useRouter } from 'next/navigation'; // Correct import for Next.js 13+ client-side navigation
 import { useState } from 'react'; // Import useState hook from React
 
+
 const LogoutConfirmation = () => {
   const router = useRouter(); // Initialize router before using it
   const [showInstructions, setShowInstructions] = useState(false); 
@@ -28,7 +29,9 @@ const LogoutConfirmation = () => {
     }
 };
 
-  const handleShowInstructions = () => setShowInstructions(true);
+  handleGoToLogin() ; 
+
+  /*const handleShowInstructions = () => setShowInstructions(true);
 
   return (
     <div style={{ padding: '20px', textAlign: 'center', maxWidth: '100%', margin: 'auto', marginTop: '50px' }}>
@@ -57,7 +60,7 @@ const LogoutConfirmation = () => {
       </div>
 
       {/* CSS for animation */}
-      <style jsx>{`
+      /*<style jsx>{`
         .logout-container {
           color: white;
           background-color: black;
@@ -109,6 +112,6 @@ const LogoutConfirmation = () => {
       `}</style>
     </div>
   );
-};
+};*/
 
 export default LogoutConfirmation;
