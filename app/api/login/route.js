@@ -5,8 +5,9 @@ import jwt from 'jsonwebtoken';
 import clientPromise from '@/lib/mongodb';
 
 export async function POST(req) {
-  // Log the beginning of the login process
-  console.log('Login process started');
+  if (req.method !== 'POST') {
+    return NextResponse.json({ error: 'Method Not Allowed' }, { status: 405 });
+  }
 
   const { email, password } = await req.json();
   

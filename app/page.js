@@ -6,33 +6,33 @@ import { useEffect, useState } from 'react';
 
 export default function HomePage() {
   const router = useRouter();
-  const [isAuthenticated, setIsAuthenticated] = useState(null);
+  const [isAuthenticated, setIsAuthenticated] = useState(null); // null as initial state
 
-  // Check if the user is authenticated (replace with your actual logic)
   useEffect(() => {
     const checkAuth = async () => {
       try {
-        const res = await fetch('/api/checkAuth'); // Adjust this route to your actual API
+        const res = await fetch('/api/checkAuth');
         if (res.ok) {
-          setIsAuthenticated(true);
-          router.push('/intro'); // Redirect to /stock after successful authentication
+          setIsAuthenticated(true);  // User is authenticated
+          router.replace('/intro');  // Use replace instead of push for redirection
         } else {
-          setIsAuthenticated(false);
-          router.push('/login'); // Redirect to login if not authenticated
+          setIsAuthenticated(false); // User is not authenticated
+          router.replace('/login');  // Redirect to login if not authenticated
         }
       } catch (error) {
-        setIsAuthenticated(false);
-        router.push('/login'); // Redirect to login on error
+        console.error('Error checking authentication:', error);
+        setIsAuthenticated(false);  // Handle network or other errors
+        router.replace('/login');    // Redirect to login on error
       }
     };
 
-    checkAuth(); // Run on component mount
+    checkAuth(); // Run the authentication check when the component mounts
   }, [router]);
 
   if (isAuthenticated === null) {
     return <div>Loading...</div>; // Show a loading state while checking auth
   }
 
-  // Return null or a loading spinner since the user will be redirected
-  return null; // Since the user is redirected, there's no need to display anything
+  // Return null as the user will be redirected and no other content needs to be displayed
+  return null;
 }
