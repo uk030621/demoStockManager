@@ -2,7 +2,11 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   color: black;
   /*background-color: #c8f3c8;*/
-  
+  /*background-color: #c8f3c8;*/
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .return-link-backtointro{

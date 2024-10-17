@@ -38,7 +38,7 @@ export default function LoginPage() {
 
   return (
     
-    <div style={{textAlign:'center', padding: '20px', maxWidth: '100%', boxSizing: 'border-box', border:'none'}}>
+    <div style={{height:'100vh', backgroundColor:'black', margin:'none', textAlign:'center', padding: '0px', maxWidth: '100%', boxSizing: 'border-box', border:'none'}}>
       <div
         style={{
           backgroundColor: 'black',
@@ -56,7 +56,7 @@ export default function LoginPage() {
                         width={150}  
                         height={150}
                         priority={true} 
-                        style={{ marginLeft: '5px' }}  
+                        style={{ marginLeft: '5px', marginTop:'20px' }}  
                     />
         <h1 style={{ textAlign: 'center', marginBottom: '15px', color:'#c8f3c8' }}>Stock Portfolio</h1>           
         <h1 style={{ textAlign: 'center', marginBottom: '15px', color:'white' }}>Login</h1>

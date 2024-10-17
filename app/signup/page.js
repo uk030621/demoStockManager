@@ -37,7 +37,7 @@ export default function SignupPage() {
   };
 
   return (
-    <div style={{textAlign:'center', padding: '20px', maxWidth: '100%', boxSizing: 'border-box'}}>
+    <div style={{height:'100vh', backgroundColor:'black', margin:'none', textAlign:'center', padding: '0px', maxWidth: '100%', boxSizing: 'border-box'}}>
       <div
         style={{
           backgroundColor: 'black',
@@ -55,7 +55,7 @@ export default function SignupPage() {
                         width={150}  
                         height={150}
                         priority={true}
-                        style={{marginLeft: '5px', borderRadius:'50px' }}  
+                        style={{marginLeft: '5px', borderRadius:'50px', marginTop:'20px' }}  
                     />
         <h1 style={{ textAlign: 'center', marginBottom: '15px', color:'#c8f3c8' }}>Stock Portfolio</h1>             
         <h1 style={{ textAlign: 'center', marginBottom: '15px', color:'white' }}>Register</h1>
